@@ -4,6 +4,7 @@ import AlbumListView from '@/views/AlbumListView'
 import AlbumView from "@/views/AlbumView"
 import ImageView from "@/views/ImageView"
 import AboutView from "@/views/AboutView"
+import LoginView from "@/views/LoginView"
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutView,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView,
   },
   {
     path: '/albums/:id',

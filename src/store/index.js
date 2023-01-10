@@ -8,6 +8,7 @@ export const store = new Vuex.Store({
   state: {
     albums: [],
     images: [],
+    user: {},
   },
   getters: {
     getAlbums: state => {
@@ -21,6 +22,9 @@ export const store = new Vuex.Store({
     },
     getImageById: state => id => {
       return state.images.find(image => image.id == id);
+    },
+    getUser: state => {
+      return state.user;
     }
   },
   mutations: {
@@ -32,6 +36,9 @@ export const store = new Vuex.Store({
     },
     setImages (state, images) {
       state.images = images
+    },
+    userLogin (state, user) {
+      state.user = user
     },
   },
   actions: {
