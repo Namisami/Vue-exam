@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "date": "01.09.2021",
+    "cover": "picture1.jpg",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+  },
+  {
+    "id": 2,
+    "date": "01.01.2001",
+    "cover": "picture2.jpg",
+    "desc": "It is a long established fact that a reader will be distracted."
+  },
+  {
+    "id": 3,
+    "date": "03.09.2021",
+    "cover": "picture3.jpg",
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text"
+  },
+  {
+    "id": 4,
+    "date": "15.09.2021",
+    "cover": "picture4.jpg",
+    "desc": "There are many variations of passages of Lorem Ipsum available"
+  },
+  {
+    "id": 5,
+    "date": "01.09.2021",
+    "cover": "picture5.jpg",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+  },
+  {
+    "id": 6,
+    "date": "01.01.2001",
+    "cover": "picture6.jpg",
+    "desc": "It is a long established fact that a reader will be distracted."
+  },
+  {
+    "id": 7,
+    "date": "03.09.2021",
+    "cover": "picture7.jpg",
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text"
+  },
+  {
+    "id": 8,
+    "date": "15.09.2021",
+    "cover": "picture8.jpg",
+    "desc": "There are many variations of passages of Lorem Ipsum available"
+  },
+  {
+    "id": 9,
+    "date": "01.09.2021",
+    "cover": "picture9.jpg",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+  },
+  {
+    "id": 10,
+    "date": "01.01.2001",
+    "cover": "picture10.jpg",
+    "desc": "It is a long established fact that a reader will be distracted."
+  }
+]

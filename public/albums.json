@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "date": "01.09.2021",
+    "name": "What is Lorem Ipsum?",
+    "cover": "picture1.jpg",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "images": [1, 3, 6, 9] 
+  },
+  {
+    "id": 2,
+    "date": "01.01.2001",
+    "name": "Why do we use it?",
+    "cover": "picture2.jpg",
+    "desc": "It is a long established fact that a reader will be distracted.",
+    "images": [2, 5, 10] 
+  },
+  {
+    "id": 3,
+    "date": "03.09.2021",
+    "name": "Where does it come from?",
+    "cover": "picture3.jpg",
+    "desc": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+    "images": [1, 2, 3, 4, 5, 6, 7] 
+  },
+  {
+    "id": 4,
+    "date": "15.09.2021",
+    "name": "Where can I get some?",
+    "cover": "picture9.jpg",
+    "desc": "There are many variations of passages of Lorem Ipsum available",
+    "images": [7, 8] 
+  }
+]
