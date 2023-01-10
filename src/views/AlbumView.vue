@@ -11,7 +11,7 @@
         <p class='m-0 text-right'>{{ album.date }}</p>
       </div>
     </div>
-    <div class="row row-cols-3 mb-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
       <div
         class="col p-2"
         v-for="image in album.images"

@@ -25,22 +25,25 @@ export const store = new Vuex.Store({
   },
   mutations: {
     setAlbums (state, albums) {
-      state.albums = albums;
+      state.albums = albums
+    },
+    addAlbum (state, album) {
+      state.albums.push(album)
     },
     setImages (state, images) {
-      state.images = images;
-    }
+      state.images = images
+    },
   },
   actions: {
     async loadAlbums({ commit }) {
-      let albums;
+      let albums
       await axios
         .get('albums.json')
         .then(res => albums = res.data);
       commit('setAlbums', albums);
     },
     async loadImages({ commit }) {
-      let images;
+      let images
       await axios
         .get('images.json')
         .then(res => images = res.data);
