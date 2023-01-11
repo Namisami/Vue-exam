@@ -4,10 +4,9 @@
       Image Element
     </h1>
     <img 
-      class="rounded mx-auto d-block"
+      class="rounded mx-auto d-block w-75"
       v-if="image.cover !== null"
       :src="image.cover && require(`../../public/images/${image.cover}`)"
-      width="500"  
       alt="Big version of picture"
     />
     <div class="alert alert-info my-2">
