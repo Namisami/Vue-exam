@@ -7,6 +7,7 @@
       v-if="image.cover !== null"
       :src="image.cover && require(`../../public/images/${image.cover}`)"
       width="300"
+      alt="Album's image element"
     />
     <div class="card-body py-2">
       <p class="card-text">{{ image.desc }}</p>  

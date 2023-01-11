@@ -1,22 +1,28 @@
 <template>
-  <div id="app" class="">
-    <header class="bg-dark d-flex justify-content-between px-5 py-2">
+  <v-app id="app" class="">
+    <header class="bg-dark d-flex justify-content-between px-5 py-2 d-print-none">
       <nav class="nav">
-        <li class="nav-item">
-          <router-link 
-            class="nav-link text-light"
-            to="/">
+        <v-tabs dark>
+          <v-tab
+            class="bg-dark"
+            to="/"
+          >
             Home
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link 
-            class="nav-link text-light"
-            to="/about">
+          </v-tab>
+          <v-tab
+          class="bg-dark"
+            to="/about"
+          >
             About
-          </router-link>
-        </li>
+          </v-tab>
+        </v-tabs>
       </nav>
+      <a href="/albums.json" target="_blank" class="btn btn-secondary text-white py-3 mx-2">
+        albums.json
+      </a>
+      <a href="/images.json" target="_blank" class="btn btn-secondary text-white py-3">
+        images.json
+      </a>
       <div>
         <button v-if="user.name" class="btn btn-primary text-light">{{ user.name }}</button>
         <router-link v-else to="login">
@@ -26,8 +32,23 @@
         <button v-else class="btn btn-warning ml-2">Register</button>
       </div>
     </header>
-    <router-view />
-  </div>
+    <v-main>
+      <router-view />
+    </v-main>
+    <v-footer
+      color="dark  lighten-1"
+      padless
+    >
+      <v-card
+        dark
+        class="d-flex w-100"
+      >
+        <v-card-text class="py-2 text-center">
+          {{ new Date().getFullYear() }} — <strong>Mospolytech</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>

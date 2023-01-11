@@ -5,6 +5,7 @@
       :style="{ 'object-fit': 'cover' }"
       height="300"
       :src="require(`../../public/images/${album.cover}`)"
+      alt="Album element"
     />
     <div class="card-body py-1">
       <p class="card-title border-bottom py-2 my-0">{{ album.name }}</p>

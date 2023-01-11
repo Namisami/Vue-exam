@@ -1,5 +1,5 @@
 <template>
-  <div class="my-5 border rounded">
+  <div class="my-5 border rounded d-print-none">
     <p class="text-center bg-dark text-light rounded-top">Create new album</p>
     <form
       class="p-3"
@@ -26,6 +26,7 @@
           id="nameInput"
           class="form-control"
           required
+          inputmode="text"
           v-model="name"
         />
       </div>
@@ -37,11 +38,32 @@
           id="descriptionInput"
           class="form-control"
           required
+          inputmode="text"
           v-model="description"
         />
       </div>
-      <button type="submit" class="btn btn-primary text-light">Submit</button>
+      <button 
+        type="submit" 
+        class="btn btn-primary text-light" 
+      >
+        Submit
+      </button>
     </form>
+    <v-snackbar
+      v-model="snackbar"
+    >
+      Создан новый альбом
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -52,6 +74,7 @@ export default {
   name: "FormElement",
   data() {
     return {
+      snackbar: false,
       errorMessage: '',
       cover: {
         name: '',
@@ -89,9 +112,10 @@ export default {
         formData.append('date', Date.now())
         await axios
           .post('https://eodzf3dkszyjh1w.m.pipedream.net', formData)
-          .then(res => console.log(res));
+          .then(res => console.log(res))
       }
-      return this.createExample();
+      this.snackbar = true
+      return this.createExample()
     },
     createExample () {
       this.$store.commit('addAlbum', {

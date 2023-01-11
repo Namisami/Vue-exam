@@ -1,30 +1,38 @@
 <template>
   <div class="container">
     <h1 class="text-center my-2">Album List</h1>
-    <div class="d-flex justify-content-between">
-      <button
-        class="btn btn-primary my-3"
-        @click="loadAlbums"
-      >
-        Update
-      </button>
-      <button
-        v-if="!isFiltered"
-        class="btn btn-dark text-light my-3"
-        @click="filterEmpty"
-      >
-        Hide empty
-      </button>
-      <button
-        v-else
-        class="btn btn-dark text-light my-3"
-        @click="showAll"
-      >
-        Show all
-      </button>
-      <div class="d-flex my-auto">
-        <p class="m-0">Filter by:</p>
-        <input @click="sortByCount" class="ml-1 px-1 bg-dark text-light rounded" type="button" value="Element count" />
+    <div class="d-print-none">
+      <div class="d-flex justify-content-between">
+        <div>
+          <button
+            class="btn btn-primary my-3"
+            @click="loadAlbums"
+          >
+            Update
+          </button>
+          <button
+            v-if="!isFiltered"
+            class="btn btn-dark text-light my-3 mx-2"
+            @click="filterEmpty"
+          >
+            Hide empty
+          </button>
+          <button
+            v-else
+            class="btn btn-dark text-light my-3 mx-2"
+            @click="showAll"
+          >
+            Show all
+          </button>
+        </div>
+        <div class="d-flex my-auto">
+          <p class="m-0">Filter by:</p>
+          <input @click="sortByCount" class="ml-1 px-1 bg-dark text-light rounded" type="button" value="Element count" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="searchInput">Поиск</label>
+        <input id='searchInput' class="form-control" placeholder="Введите запрос для поиска..." v-model="search" />
       </div>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
@@ -61,6 +69,7 @@ export default {
       albums: [],
       isFiltered: false,
       isSorted: false,
+      search: '',
     }
   },
   methods: {
@@ -96,9 +105,18 @@ export default {
       this.isFiltered = !this.isFiltered
     },
     showAll() {
-      this.loadAlbums()
+      this.albums = this.$store.getters.getAlbums
       this.isFiltered = !this.isFiltered
-    }
+    },
+  },
+  watch: {
+    search: function (val) {
+      this.albums = this.$store.getters.getAlbums
+      this.albums = this.albums.filter((value) => value.name.toLowerCase().includes(val.toLowerCase()))
+      if (this.isFiltered) {
+        this.albums = this.albums.filter((value) => value.images.length !== 0)
+      }
+    },
   },
   mounted() {
     this.loadAlbums()
