@@ -3,7 +3,19 @@
     "id": 1,
     "date": "01.09.2021",
     "cover": "picture1.jpg",
-    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "comments": [
+      {
+      "id": 1,
+      "author": "Hihihi",
+      "text": "Universal Comment"
+      },
+      {
+        "id": 2,
+        "author": "Mospolytech",
+        "text": "Exam again"
+      }
+    ]
   },
   {
     "id": 2,
@@ -27,7 +39,19 @@
     "id": 5,
     "date": "01.09.2021",
     "cover": "picture5.jpg",
-    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "comments": [
+      {
+      "id": 1,
+      "author": "Hihihi",
+      "text": "Universal Comment"
+      },
+      {
+        "id": 2,
+        "author": "Mospolytech",
+        "text": "Exam again"
+      }
+    ]
   },
   {
     "id": 6,
@@ -45,7 +69,19 @@
     "id": 8,
     "date": "15.09.2021",
     "cover": "picture8.jpg",
-    "desc": "There are many variations of passages of Lorem Ipsum available"
+    "desc": "There are many variations of passages of Lorem Ipsum available",
+    "comments": [
+      {
+      "id": 1,
+      "author": "Hihihi",
+      "text": "Universal Comment"
+      },
+      {
+        "id": 2,
+        "author": "Mospolytech",
+        "text": "Exam again"
+      }
+    ]
   },
   {
     "id": 9,
@@ -57,6 +93,18 @@
     "id": 10,
     "date": "01.01.2001",
     "cover": "picture10.jpg",
-    "desc": "It is a long established fact that a reader will be distracted."
+    "desc": "It is a long established fact that a reader will be distracted.",
+    "comments": [
+      {
+      "id": 1,
+      "author": "Hihihi",
+      "text": "Universal Comment"
+      },
+      {
+        "id": 2,
+        "author": "Mospolytech",
+        "text": "Exam again"
+      }
+    ]
   }
 ]

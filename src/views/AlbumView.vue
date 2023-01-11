@@ -11,7 +11,8 @@
         <p class='m-0 text-right'>{{ album.date }}</p>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+    <grid-element :elements="album.images" elementsType='images'></grid-element>
+    <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
       <div
         class="col p-2"
         v-for="image in album.images"
@@ -23,17 +24,19 @@
           <image-element :imageId="image"></image-element>
         </router-link>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import ImageElement from '@/components/ImageElement.vue';
+// import ImageElement from '@/components/ImageElement.vue';
+import GridElement from '@/components/GridElement.vue';
 
 export default {
   name: 'AlbumView',
   components: {
-    ImageElement
+    // ImageElement,
+    GridElement
   },
   data() {
     return {

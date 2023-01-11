@@ -23,9 +23,9 @@
       <a href="/images.json" target="_blank" class="btn btn-secondary text-white py-3">
         images.json
       </a>
-      <div>
+      <div class="d-flex">
         <button v-if="user.name" class="btn btn-primary text-light">{{ user.name }}</button>
-        <router-link v-else to="login">
+        <router-link class="d-flex" v-else to="/login">
           <button type="button" class="btn btn-primary text-light">Login</button>
         </router-link>
         <button v-if="user.name" class="btn btn-warning ml-2" @click="logout">Log out</button>

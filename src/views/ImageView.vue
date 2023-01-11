@@ -14,6 +14,29 @@
       <p class="m-0 text-center">{{ image.desc }}</p>
       <p class="m-0 text-right">{{ image.date }}</p>
     </div>
+    <div>
+      <h2 class="text-center">
+        Comments
+      </h2>
+      <div class="my-5">
+        <div 
+          v-for="comment in image.comments" 
+          :key="comment.id"
+          class="my-2 p-2 shadow border rounded"
+        >
+          <p class="m-0"><strong>{{ comment.author }}</strong></p>
+          <p class="m-0 ml-2">{{ comment.text }}</p>
+        </div>
+      </div>
+      <h3 class="text-center d-print-none">New comment</h3>
+      <form class="my-4 d-flex flex-column justify-content-center d-print-none" @submit="newComment">
+        <div class="form-group">
+          <label for="commentInput">Comment text</label>
+          <input id="commentInput" v-model="commentText" class="form-control" placeholder="White your comment here" />
+        </div>
+        <button type="submit" class="btn btn-primary text-light">Send comment</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -26,7 +49,18 @@ export default {
   },
   data() {
     return {
-      image: {},
+      image: {
+        comments: []
+      },
+      commentText: '',
+    }
+  },
+  methods: {
+    newComment () {
+      this.image.comments.push({
+        'author': "Me",
+        'text': this.commentText
+      })
     }
   },
   async mounted() {

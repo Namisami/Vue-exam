@@ -15,13 +15,12 @@
 </template>
 
 <script>
-
 export default {
   name: "AlbumElement",
   props: ["album"],
   data() {
     return {
-
+      
     }
   },
 };

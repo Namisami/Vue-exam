@@ -35,7 +35,8 @@
         <input id='searchInput' class="form-control" placeholder="Введите запрос для поиска..." v-model="search" />
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+    <grid-element :elements="albums" elementsType="albums"></grid-element>
+    <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
       <div
         class="col p-2"
         v-for="album in albums"
@@ -49,20 +50,22 @@
           />
         </router-link>
       </div>
-    </div>
+    </div> -->
     <form-element></form-element>
   </div>
 </template>
 
 <script>
-import AlbumElement from '@/components/AlbumElement.vue';
+// import AlbumElement from '@/components/AlbumElement.vue';
 import FormElement from '@/components/FormElement.vue';
+import GridElement from '@/components/GridElement.vue';
 
 export default {
   name: 'AlbumListView',
   components: {
-    AlbumElement,
+    // AlbumElement,
     FormElement,
+    GridElement,
   },
   data() {
     return {
