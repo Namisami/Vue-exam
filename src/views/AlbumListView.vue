@@ -36,21 +36,12 @@
       </div>
     </div>
     <grid-element :elements="albums" elementsType="albums"></grid-element>
-    <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
-      <div
-        class="col p-2"
-        v-for="album in albums"
-        :key="album.id"
-      >
-        <router-link 
-          :to="{ name: 'album', params: { id: album.id } }"
-        >
-          <album-element
-            :album="album"
-          />
-        </router-link>
-      </div>
-    </div> -->
+    <h2 class="text-center my-3">Создать альбом</h2>
+    <p>Конструктор фотоальбомов "Имя" позволяет вам создать свой альбом онлайн и бесплатно делиться им с друзьями и со всем миром!</p>
+    <p>Выше вы можете увидеть фотоальбомы, которые УЖЕ создали наши пользователи и которые увидели десятки тысяч людей. Почему мы?
+      Потому что с нами фотоальбом - это просто: три поля, один клик - и ваш альбом готов!
+    </p>
+    <h3 class="text-center">Присоединяйтесь!</h3>
     <form-element></form-element>
   </div>
 </template>
