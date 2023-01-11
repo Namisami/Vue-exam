@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="">
-    <div class="bg-dark d-flex justify-content-between px-5 py-2">
+    <header class="bg-dark d-flex justify-content-between px-5 py-2">
       <nav class="nav">
         <li class="nav-item">
           <router-link 
@@ -25,7 +25,7 @@
         <button v-if="user.name" class="btn btn-warning ml-2" @click="logout">Log out</button>
         <button v-else class="btn btn-warning ml-2">Register</button>
       </div>
-    </div>
+    </header>
     <router-view />
   </div>
 </template>

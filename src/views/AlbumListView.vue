@@ -8,9 +8,23 @@
       >
         Update
       </button>
+      <button
+        v-if="!isFiltered"
+        class="btn btn-dark text-light my-3"
+        @click="filterEmpty"
+      >
+        Hide empty
+      </button>
+      <button
+        v-else
+        class="btn btn-dark text-light my-3"
+        @click="showAll"
+      >
+        Show all
+      </button>
       <div class="d-flex my-auto">
         <p class="m-0">Filter by:</p>
-        <input @click="filterByCount" class="ml-1 px-1 bg-dark text-light rounded" type="button" value="Element count" />
+        <input @click="sortByCount" class="ml-1 px-1 bg-dark text-light rounded" type="button" value="Element count" />
       </div>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
@@ -46,6 +60,7 @@ export default {
     return {
       albums: [],
       isFiltered: false,
+      isSorted: false,
     }
   },
   methods: {
@@ -54,7 +69,7 @@ export default {
       this.albums = this.$store.getters.getAlbums
     },
     compare(a, b) {
-      if (!this.isFiltered) {
+      if (!this.isSorted) {
         if ( a.images.length < b.images.length ){
           return -1;
         }
@@ -72,10 +87,18 @@ export default {
         return 0;
       }
     },
-    filterByCount() {
+    sortByCount() {
       this.albums.sort( this.compare )
+      this.isSorted = !this.isSorted
+    },
+    filterEmpty() {
+      this.albums = this.albums.filter((value) => value.images.length !== 0)
       this.isFiltered = !this.isFiltered
     },
+    showAll() {
+      this.loadAlbums()
+      this.isFiltered = !this.isFiltered
+    }
   },
   mounted() {
     this.loadAlbums()
