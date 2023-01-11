@@ -1,13 +1,13 @@
 <template>
   <div class="my-5 border rounded d-print-none">
-    <p class="text-center bg-dark text-light rounded-top">Create new album</p>
+    <p class="text-center bg-dark text-light rounded-top">Создать новый альбом</p>
     <form
       class="p-3"
       @submit="postEntry"
     >
       <div class="form-group">
         <label for="coverInput">
-          Cover
+          Обложка
         </label>
         <input
           id="coverInput"
@@ -20,7 +20,7 @@
       </div>
       <div class="form-group">
         <label for="nameInput">
-          Title
+          Название
         </label>
         <input
           id="nameInput"
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="descriptionInput">
-          Description
+          Описание
         </label>
         <input
           id="descriptionInput"
@@ -46,7 +46,7 @@
         type="submit" 
         class="btn btn-primary text-light" 
       >
-        Submit
+        Создать
       </button>
     </form>
     <v-snackbar
@@ -60,7 +60,7 @@
           v-bind="attrs"
           @click="snackbar = false"
         >
-          Close
+          Закрыть
         </v-btn>
       </template>
     </v-snackbar>

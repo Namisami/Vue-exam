@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-center my-2">Album List</h1>
+    <h1 class="text-center my-2">Список альбомов</h1>
     <div class="d-print-none">
       <div class="d-flex justify-content-between">
         <div>
@@ -8,26 +8,26 @@
             class="btn btn-primary my-3"
             @click="loadAlbums"
           >
-            Update
+            Обновить
           </button>
           <button
             v-if="!isFiltered"
             class="btn btn-dark text-light my-3 mx-2"
             @click="filterEmpty"
           >
-            Hide empty
+            Скрыть пустые
           </button>
           <button
             v-else
             class="btn btn-dark text-light my-3 mx-2"
             @click="showAll"
           >
-            Show all
+            Показать все
           </button>
         </div>
         <div class="d-flex my-auto">
-          <p class="m-0">Filter by:</p>
-          <input @click="sortByCount" class="ml-1 px-1 bg-dark text-light rounded" type="button" value="Element count" />
+          <p class="m-0">Фильтровать по:</p>
+          <input @click="sortByCount" class="ml-1 px-1 bg-dark text-light rounded" type="button" value="Количеству изображений" />
         </div>
       </div>
       <div class="form-group">

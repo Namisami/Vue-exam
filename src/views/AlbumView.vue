@@ -12,30 +12,15 @@
       </div>
     </div>
     <grid-element :elements="album.images" elementsType='images'></grid-element>
-    <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
-      <div
-        class="col p-2"
-        v-for="image in album.images"
-        :key="image"
-      >
-        <router-link
-          :to="{ name: 'image', params: { id: image } }"
-        >
-          <image-element :imageId="image"></image-element>
-        </router-link>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
-// import ImageElement from '@/components/ImageElement.vue';
 import GridElement from '@/components/GridElement.vue';
 
 export default {
   name: 'AlbumView',
   components: {
-    // ImageElement,
     GridElement
   },
   data() {

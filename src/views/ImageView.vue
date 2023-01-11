@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="text-center my-2">
-      Image Element
+      Изображение
     </h1>
     <img 
       class="rounded mx-auto d-block w-75"
@@ -15,7 +15,7 @@
     </div>
     <div>
       <h2 class="text-center">
-        Comments
+        Комментарии
       </h2>
       <div class="my-5">
         <div 
@@ -27,13 +27,13 @@
           <p class="m-0 ml-2">{{ comment.text }}</p>
         </div>
       </div>
-      <h3 class="text-center d-print-none">New comment</h3>
+      <h3 class="text-center d-print-none">Новый комментарий</h3>
       <form class="my-4 d-flex flex-column justify-content-center d-print-none" @submit="newComment">
         <div class="form-group">
-          <label for="commentInput">Comment text</label>
-          <input id="commentInput" v-model="commentText" class="form-control" placeholder="White your comment here" />
+          <label for="commentInput">Текст комментария</label>
+          <input id="commentInput" v-model="commentText" class="form-control" placeholder="Пишите свой комментарий здесь" />
         </div>
-        <button type="submit" class="btn btn-primary text-light">Send comment</button>
+        <button type="submit" class="btn btn-primary text-light">Отправить комментарий</button>
       </form>
     </div>
   </div>

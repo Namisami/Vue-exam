@@ -1,20 +1,20 @@
 <template>
   <div class="container my-2">
-    <h1 class="text-center">Login view</h1>
+    <h1 class="text-center">Логин</h1>
     <form class="d-flex flex-column" @submit="userLogin">
       <div class="form-group">
         <label for="loginName">
-          Name
+          Имя
         </label>
         <input id="loginName" v-model="user.name" required class="form-control" />
       </div>
       <div class="form-group">
         <label for="loginPassword">
-          Password
+          Пароль
         </label>
         <input id="loginPassword" type="password" class="form-control" />
       </div>
-      <button type="submit" class="btn btn-primary text-light mx-auto">Login</button>
+      <button type="submit" class="btn btn-primary text-light mx-auto">Войти</button>
     </form>
   </div>
 </template>

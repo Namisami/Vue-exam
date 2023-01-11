@@ -7,13 +7,13 @@
             class="bg-dark"
             to="/"
           >
-            Home
+            Главная
           </v-tab>
           <v-tab
           class="bg-dark"
             to="/about"
           >
-            About
+            О нас
           </v-tab>
         </v-tabs>
       </nav>
@@ -26,10 +26,10 @@
       <div class="d-flex justify-content-center">
         <button v-if="user.name" class="my-1 btn btn-primary text-light">{{ user.name }}</button>
         <router-link class="d-flex" v-else to="/login">
-          <button type="button" class="my-1 btn btn-primary text-light">Login</button>
+          <button type="button" class="my-1 btn btn-primary text-light">Войти</button>
         </router-link>
-        <button v-if="user.name" class="my-1 btn btn-warning ml-2" @click="logout">Log out</button>
-        <button v-else class="my-1 btn btn-warning ml-2">Register</button>
+        <button v-if="user.name" class="my-1 btn btn-warning ml-2" @click="logout">Выйти</button>
+        <button v-else class="my-1 btn btn-warning ml-2">Регистрация</button>
       </div>
     </header>
     <v-main>
